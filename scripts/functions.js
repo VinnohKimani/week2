@@ -74,3 +74,11 @@ const ongezab = (a, b)=>{
     return a + b;
 }
 console.log(ongezab(14, 16));
+
+
+const greet = function (name) {
+  return `Good Evenning ${name}`
+};
+
+console.log(greet("Kimani"));
+
