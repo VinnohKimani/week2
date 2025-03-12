@@ -30,3 +30,18 @@ function myfunction(x, y) {
 const numberOne = 19;
 const numberTwo = 22;
 myfunction(20, numberTwo);
+
+
+const morning = function (time, fn) {
+  console.log(fn());
+  console.log("Good morning it's" + time);
+}
+
+function callBack() {
+  console.log("I am a callback function");
+}
+morning(" 9 AM ", callBack);
+
+const time = "9 Am";
+console.log(time);
+

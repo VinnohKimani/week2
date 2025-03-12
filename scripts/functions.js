@@ -70,15 +70,89 @@ console.log(ongeza(10, 19));
 const add = (a, b) => a + b;
 console.log(add(8, 10));
 
-const ongezab = (a, b)=>{
-    return a + b;
-}
+const ongezab = (a, b) => {
+  return a + b;
+};
 console.log(ongezab(14, 16));
 
-
 const greet = function (name) {
-  return `Good Evenning ${name}`
+  return `Good Evenning ${name}`;
 };
 
 console.log(greet("Kimani"));
 
+const weatherToday = "Rainy";
+
+function exerciseDog(dogName, dogBreed) {
+  if (weatherToday === "Rainy") {
+    return `${dogName} did not exercise due to rain`;
+  }
+  console.log(`Wake ${dogName} the ${dogBreed}`);
+  console.log(`Leash ${dogName} the ${dogBreed}`);
+  console.log(`Walk to the park ${dogName} the ${dogBreed}`);
+  console.log(`Throw the frisbee for ${dogName} the ${dogBreed}`);
+  console.log(`Walk home with ${dogName} the ${dogBreed}`);
+  console.log(`Unleash ${dogName} the ${dogBreed}`);
+  return `${dogName} is happy and tired!`;
+}
+
+const result = exerciseDog("Byron", "poodle");
+console.log(result);
+
+function functionName(ListOfParameters) {
+  console.log(ListOfParameters);
+  console.log("This is my first function");
+  return 3 + 3;
+}
+functionName(false);
+
+const outPut = functionName();
+
+console.log(outPut);
+
+function sum(a, b) {
+  console.log(`a = ${a}`);
+  console.log(`b = ${b}`);
+  return a + b;
+}
+console.log(sum(6, 9));
+console.log(sum(15, 88));
+console.log(sum(77, 54));
+console.log(sum(78, 100));
+
+function perimeterOfRectangle(l, w) {
+  console.log(`l = ${l}`);
+  console.log(`w= ${w}`);
+  return `Perimeter = ${(2*l) + (2* w)}`;
+}
+console.log(perimeterOfRectangle(7, 5));
+
+// functions are firstclass citizen meaning we can treat them like any other values
+// since It's still a function the rules of functions still apply
+// Now this becomes a function expresiion(function assigned to varriables)
+// The function expression can work without function names i.e anonymous functions
+
+// function expresiions don;\'t allow hoisting since the function is stored 
+// inside a varriable
+
+const perimeter = (l, w) => {
+  return l * 2 + w * 2;
+}
+
+console.log(perimeter(4, 6));
+
+const newVarriable = 9
+console.log(newVarriable);
+
+function calculator(z, a, c) {
+  // console.log(c(7, 5));
+  return c(z, a);
+  // console.log(x);
+  // At this point we are executing the function
+  //  perimeter through the placeholder
+  return z;
+}
+
+const z = 8;
+const outPut1 = calculator(7, 5, perimeter);
+console.log(outPut1);
