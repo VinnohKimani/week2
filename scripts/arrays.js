@@ -76,5 +76,94 @@ const scoresAbove60 = scores.filter((score) => {
     return score;
   }
 });
-console.log(scores)
+console.log(scores);
 console.log(scoresAbove60);
+
+console.log(" ");
+
+// .map(), .reduce(),
+
+// .map()--> allows us to iterate over the array while running a modifying function
+//  and returns the modified array.
+
+const students = ["ian", "daud", "eugene"];
+
+const modifiedStudents = students.map((students) => students.toUpperCase());
+console.log(modifiedStudents);
+console.log(students.map(capitalizeName));
+
+console.log(" ");
+
+const name = "vincent";
+function capitalizeName(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1);
+  return name.replace(name.charAt(0), name.charAt.toUpperCase);
+}
+console.log(capitalizeName("vincent"));
+console.log(capitalizeName("eugene"));
+
+console.log(" ");
+
+const newStudents = [
+  { id: 1, name: "sharon" },
+  { id: 2, name: "vincent" },
+  { id: 3, name: "john" },
+];
+const modifiedNewStudents = newStudents.map((student) => {
+  return {
+    ...student,
+    name: student.name.toUpperCase(),
+  };
+});
+
+console.log(modifiedNewStudents);
+console.log(" ");
+
+const modifiedNewStudents1 = newStudents.map((student) => {
+  return {
+    ...student,
+    name: student.name.charAt(0).toUpperCase() + name.slice(1),
+  };
+});
+
+console.log(modifiedNewStudents1);
+
+console.log(" ");
+
+const modifiedNewStudents2 = newStudents.map((student) => {
+  return {
+    ...student,
+    name: capitalizeName(student.name),
+  };
+});
+console.log(modifiedNewStudents2);
+
+console.log(" ");
+
+// .reduce--- allows us to  create an agregate
+const numbers = [1, 2, 3, 4, 5, 34, 53, 3, 44, 23];
+const sumOfNumbers = numbers.reduce((prev, curr) => {
+  console.log(prev);
+  console.log(curr);
+  return prev + curr;
+});
+console.log(" ");
+const largestNum = numbers.reduce(
+  (prev, curr) => (prev > curr ? prev : curr),
+  0
+);
+console.log(largestNum);
+console.log(" ");
+console.log(Math.max(...numbers))
+console.log(Math.min(...numbers))
+
+console.log(sumOfNumbers);
+
+// forEach-iterates 
+students.forEach((student, index) => {
+  console.log(index)
+  console.log(student)
+})
+
+// sort, split + join
+console.log(Array.isArray(students))
